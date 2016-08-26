@@ -1,11 +1,9 @@
 package com.lom.lotsomobsentity;
 
 import net.minecraft.enchantment.EnchantmentHelper;
-import net.minecraft.enchantment.EnchantmentThorns;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityAgeable;
 import net.minecraft.entity.EntityLiving;
-import net.minecraft.entity.monster.IMob;
 import net.minecraft.entity.passive.EntityAnimal;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.potion.Potion;
@@ -14,7 +12,8 @@ import net.minecraft.util.MathHelper;
 import net.minecraft.world.EnumSkyBlock;
 import net.minecraft.world.World;
 
-public class EntityAgeableMob extends EntityAnimal implements IMob
+//public class EntityAgeableMob extends EntityAnimal implements IMob
+public class EntityAgeableMob extends EntityAnimal
 {
 
 	public EntityAgeableMob(World par1World) {
@@ -153,28 +152,30 @@ public class EntityAgeableMob extends EntityAnimal implements IMob
      */
     protected boolean isValidLightLevel()
     {
-        int i = MathHelper.floor_double(this.posX);
-        int j = MathHelper.floor_double(this.boundingBox.minY);
-        int k = MathHelper.floor_double(this.posZ);
-
-        if (this.worldObj.getSavedLightValue(EnumSkyBlock.Sky, i, j, k) > this.rand.nextInt(32))
-        {
-            return false;
-        }
-        else
-        {
-            int l = this.worldObj.getBlockLightValue(i, j, k);
-
-            if (this.worldObj.isThundering())
-            {
-                int i1 = this.worldObj.skylightSubtracted;
-                this.worldObj.skylightSubtracted = 10;
-                l = this.worldObj.getBlockLightValue(i, j, k);
-                this.worldObj.skylightSubtracted = i1;
-            }
-
-            return l <= this.rand.nextInt(8);
-        }
+//        int i = MathHelper.floor_double(this.posX);
+//        int j = MathHelper.floor_double(this.boundingBox.minY);
+//        int k = MathHelper.floor_double(this.posZ);
+//
+//        if (this.worldObj.getSavedLightValue(EnumSkyBlock.Sky, i, j, k) > this.rand.nextInt(32))
+//        {
+//            return false;
+//        }
+//        else
+//        {
+//            int l = this.worldObj.getBlockLightValue(i, j, k);
+//
+//            if (this.worldObj.isThundering())
+//            {
+//                int i1 = this.worldObj.skylightSubtracted;
+//                this.worldObj.skylightSubtracted = 10;
+//                l = this.worldObj.getBlockLightValue(i, j, k);
+//                this.worldObj.skylightSubtracted = i1;
+//            }
+//
+//            return l <= this.rand.nextInt(8);
+//        }
+    	System.out.println("****************************   IS VALID LIGHTLEVEL   ***************************");
+    	return true;
     }
 
     /**
@@ -182,7 +183,8 @@ public class EntityAgeableMob extends EntityAnimal implements IMob
      */
     public boolean getCanSpawnHere()
     {
-        return this.isValidLightLevel() && super.getCanSpawnHere();
+//        return this.isValidLightLevel() && super.getCanSpawnHere();
+        return true;
     }
 
     /**

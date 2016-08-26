@@ -189,8 +189,9 @@ public class LotsOMobsMobs
 				if(ConfigHandler.GorillaOn == true)
 				{  
 					registerModEntityWithEgg(EntityGorilla.class, mobid + "Gorilla", 0x414447, 0xFFFFFF);
-				  	EntityRegistry.addSpawn(EntityGorilla.class, (int)ConfigHandler.GorillaRate *10, 1, 7, EnumCreatureType.monster, new BiomeGenBase[] {BiomeGenBase.jungle, BiomeGenBase.jungleHills});
-				}
+				  	EntityRegistry.addSpawn(EntityGorilla.class, (int)ConfigHandler.GorillaRate *10, 1, 7, EnumCreatureType.creature, new BiomeGenBase[] {BiomeGenBase.jungle, BiomeGenBase.jungleHills});
+//				  	EntityRegistry.addSpawn(EntityGorilla.class, (int)ConfigHandler.GorillaRate *10, 1, 7, EnumCreatureType.monster, new BiomeGenBase[] {BiomeGenBase.jungle, BiomeGenBase.jungleHills});
+					}
 				if(ConfigHandler.CamelOn == true)
 				{   
 			        registerModEntityWithEgg(EntityCamel.class, mobid + "Camel", 0xFADFCD, 0xF5C9AB);

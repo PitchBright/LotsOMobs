@@ -121,15 +121,15 @@ public class LotsOMobsEventHandler
 		{
 			event.getPlayer().addStat(LotsOMobsAchievementsBook.AchievementCoconut, 1);
 		}
-		if(event.block instanceof BlockCrops)
-		{
-			if(ConfigHandler.MoleOn && event.world.rand.nextInt(10)==1)
-			{
-        	EntityMole entityMole = new EntityMole(event.world);
-        	entityMole.setLocationAndAngles(event.x, event.y, event.z, 0, 0);
-        	event.world.spawnEntityInWorld(entityMole);
-			}
-		}
+//		if(event.block instanceof BlockCrops)
+//		{
+//			if(ConfigHandler.MoleOn && event.world.rand.nextInt(10)==1)
+//			{
+//        	EntityMole entityMole = new EntityMole(event.world);
+//        	entityMole.setLocationAndAngles(event.x, event.y, event.z, 0, 0);
+//        	event.world.spawnEntityInWorld(entityMole);
+//			}
+//		}
 	}
 	
 	@SubscribeEvent

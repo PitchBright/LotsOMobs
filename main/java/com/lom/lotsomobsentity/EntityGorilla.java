@@ -19,6 +19,7 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.MathHelper;
+import net.minecraft.world.EnumSkyBlock;
 import net.minecraft.world.World;
 
 import com.lom.lotsomobsinit.LotsOMobsItems;
@@ -195,6 +196,48 @@ return 1F;
     public EntityAgeable createChild(EntityAgeable par1EntityAgeable)
     {
         return this.spawnBabyAnimal(par1EntityAgeable);
+    }
+    
+    /**
+     * Takes a coordinate in and returns a weight to determine how likely this creature will try to path to the block.
+     * Args: x, y, z
+     */
+    
+    @Override
+    protected boolean isValidLightLevel()
+    {
+        int i = MathHelper.floor_double(this.posX);
+        int j = MathHelper.floor_double(this.boundingBox.minY);
+        int k = MathHelper.floor_double(this.posZ);
+
+        if (this.worldObj.getSavedLightValue(EnumSkyBlock.Sky, i, j, k) > this.rand.nextInt(32))
+        {
+            return true;
+        }
+        else
+        {
+//            int l = this.worldObj.getBlockLightValue(i, j, k);
+//
+//            if (this.worldObj.isThundering())
+//            {
+//                int i1 = this.worldObj.skylightSubtracted;
+//                this.worldObj.skylightSubtracted = 10;
+//                l = this.worldObj.getBlockLightValue(i, j, k);
+//                this.worldObj.skylightSubtracted = i1;
+//            }
+//
+//        	System.out.println("RETURN TRUE");
+//            return l <= this.rand.nextInt(8);
+        	return true;
+        }
+    }
+    
+    @Override
+    public float getBlockPathWeight(int par1, int par2, int par3)
+    {
+//    	System.out.println(0.5F - this.worldObj.getLightBrightness(par1, par2, par3));
+//        return 0.5F - this.worldObj.getLightBrightness(par1, par2, par3);
+        return this.worldObj.getLightBrightness(par1, par2, par3);
     }
 
 }

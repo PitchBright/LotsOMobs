@@ -110,7 +110,6 @@ import static com.lom.lotsomobsinit.LotsOMobsItems.WildStew;
 import static com.lom.lotsomobsinit.LotsOMobsItems.WoolyFur;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
 import com.lom.lotsomobscore.handler.ConfigHandler;
@@ -154,21 +153,6 @@ public class LotsOMobsRecipes
 		 GameRegistry.addRecipe(new ItemStack(AmberAxe, 1), new Object [] {"##", "X#", "X ", Character.valueOf('#'), Amber, Character.valueOf('X'), DinoBone});
 		 GameRegistry.addRecipe(new ItemStack(AmberHoe, 1), new Object [] {"##", " X", " X", Character.valueOf('#'), Amber, Character.valueOf('X'), DinoBone});
 		 GameRegistry.addRecipe(new ItemStack(AmberHoe, 1), new Object [] {"##", "X ", "X ", Character.valueOf('#'), Amber, Character.valueOf('X'), DinoBone});
-		 
-		 GameRegistry.addRecipe(new ItemStack(SwimmingMaskO, 1), new Object [] {"###", "XGX", "#D#", Character.valueOf('#'), Items.stick, Character.valueOf('X'), Items.string, Character.valueOf('D'), new ItemStack(Items.dye, 0, 14), Character.valueOf('G'), Item.getItemFromBlock(Blocks.glass_pane)});
-		 GameRegistry.addRecipe(new ItemStack(SwimmingMaskR, 1), new Object [] {"###", "XGX", "#D#", Character.valueOf('#'), Items.stick, Character.valueOf('X'), Items.string, Character.valueOf('D'), new ItemStack(Items.dye, 0, 1), Character.valueOf('G'), Item.getItemFromBlock(Blocks.glass_pane)});
-		 GameRegistry.addRecipe(new ItemStack(SwimmingMaskB, 1), new Object [] {"###", "XGX", "#D#", Character.valueOf('#'), Items.stick, Character.valueOf('X'), Items.string, Character.valueOf('D'), new ItemStack(Items.dye, 0, 4), Character.valueOf('G'), Item.getItemFromBlock(Blocks.glass_pane)});
-		 GameRegistry.addRecipe(new ItemStack(SwimmingMaskG, 1), new Object [] {"###", "XGX", "#D#", Character.valueOf('#'), Items.stick, Character.valueOf('X'), Items.string, Character.valueOf('D'), new ItemStack(Items.dye, 0, 10), Character.valueOf('G'), Item.getItemFromBlock(Blocks.glass_pane)});
-		 GameRegistry.addRecipe(new ItemStack(SwimmingMaskY, 1), new Object [] {"###", "XGX", "#D#", Character.valueOf('#'), Items.stick, Character.valueOf('X'), Items.string, Character.valueOf('D'), new ItemStack(Items.dye, 0, 11), Character.valueOf('G'), Item.getItemFromBlock(Blocks.glass_pane)});
-		
-		 GameRegistry.addRecipe(new ItemStack(DivingHelmet, 1), new Object [] {"GGG", "G G", "GGG", Character.valueOf('#'), Items.stick, Character.valueOf('X'), Items.string, Character.valueOf('D'), new ItemStack(Items.dye, 0, 11), Character.valueOf('G'), Item.getItemFromBlock(Blocks.glass)});
-		 GameRegistry.addRecipe(new ItemStack(OTank, 1), new Object [] {"LDL", "IDI", "LDL", Character.valueOf('L'), Items.leather, Character.valueOf('I'), Blocks.iron_block, Character.valueOf('D'), new ItemStack(Items.dye, 0, 4), Character.valueOf('G'), Item.getItemFromBlock(Blocks.glass_pane)});
-		 GameRegistry.addRecipe(new ItemStack(FlippersO, 1), new Object [] {" L ", "LDL", "LDL", Character.valueOf('L'), Items.leather, Character.valueOf('X'), Items.string, Character.valueOf('D'), new ItemStack(Items.dye, 0, 14), Character.valueOf('G'), Item.getItemFromBlock(Blocks.glass_pane)});
-		 GameRegistry.addRecipe(new ItemStack(FlippersR, 1), new Object [] {" L ", "LDL", "LDL", Character.valueOf('L'), Items.leather, Character.valueOf('X'), Items.string, Character.valueOf('D'), new ItemStack(Items.dye, 0, 1), Character.valueOf('G'), Item.getItemFromBlock(Blocks.glass_pane)});
-		 GameRegistry.addRecipe(new ItemStack(FlippersG, 1), new Object [] {" L ", "LDL", "LDL", Character.valueOf('L'), Items.leather, Character.valueOf('X'), Items.string, Character.valueOf('D'), new ItemStack(Items.dye, 0, 10), Character.valueOf('G'), Item.getItemFromBlock(Blocks.glass_pane)});
-		 GameRegistry.addRecipe(new ItemStack(FlippersB, 1), new Object [] {" L ", "LDL", "LDL", Character.valueOf('L'), Items.leather, Character.valueOf('X'), Items.string, Character.valueOf('D'), new ItemStack(Items.dye, 0, 4), Character.valueOf('G'), Item.getItemFromBlock(Blocks.glass_pane)});
-		 GameRegistry.addRecipe(new ItemStack(FlippersY, 1), new Object [] {" L ", "LDL", "LDL", Character.valueOf('L'), Items.leather, Character.valueOf('X'), Items.string, Character.valueOf('D'), new ItemStack(Items.dye, 0, 11), Character.valueOf('G'), Item.getItemFromBlock(Blocks.glass_pane)});
-
 		 if(ConfigHandler.newDimensions)
 		 GameRegistry.addRecipe(new ItemStack(TimeTraveler, 1), new Object [] {"#P#", "RXR", "#A#", Character.valueOf('#'), Items.iron_ingot, Character.valueOf('P'), DinoPortal, Character.valueOf('R'), Items.redstone, Character.valueOf('X'), Blocks.stone_button, Character.valueOf('A'), Amber});
 		 

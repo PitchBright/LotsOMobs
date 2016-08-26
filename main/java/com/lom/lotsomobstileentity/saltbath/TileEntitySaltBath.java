@@ -6,6 +6,8 @@ import net.minecraft.network.Packet;
 import net.minecraft.network.play.server.S35PacketUpdateTileEntity;
 import net.minecraft.tileentity.TileEntity;
 
+import com.lom.lotsomobscore.handler.PacketHandler;
+
 public class TileEntitySaltBath extends TileEntity
 {
 	public boolean SaltContent;

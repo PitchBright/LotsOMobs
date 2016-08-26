@@ -1,20 +1,17 @@
 package com.lom.lotsomobsitems;
 
-import java.util.Random;
+import net.minecraft.client.model.ModelBiped;
+import net.minecraft.entity.Entity;
+import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.ItemArmor;
+import net.minecraft.item.ItemStack;
 
 import com.lom.lotsomobscore.LotsOMobs;
 import com.lom.lotsomobsinit.LotsOMobsItems;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-import net.minecraft.client.model.ModelBiped;
-import net.minecraft.enchantment.Enchantment;
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.EntityLivingBase;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.ItemArmor;
-import net.minecraft.item.ItemStack;
-import net.minecraft.world.World;
 
 public class Item3DArmor extends ItemArmor
 {
@@ -23,7 +20,7 @@ public class Item3DArmor extends ItemArmor
 	{
 		super(armor, par2, par3);
 	}
-    
+	
 	@Override
 	public String getArmorTexture(ItemStack stack, Entity entity, int slot,
 	String type) {
@@ -70,7 +67,6 @@ public class Item3DArmor extends ItemArmor
 			}
 		}
 		if(armorModel != null){
-			
 			armorModel.bipedHead.showModel = armorSlot == 0;
 			armorModel.bipedHeadwear.showModel = armorSlot == 0;
 			armorModel.bipedBody.showModel = armorSlot == 1 || armorSlot == 2;

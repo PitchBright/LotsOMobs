@@ -6,7 +6,6 @@ import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 
 import com.lom.lotsomobsinit.LotsOMobsBlocks;
-import com.lom.lotsomobsinit.LotsOMobsMobs;
 
 public class MyEggTab extends CreativeTabs
 {
@@ -17,6 +16,6 @@ public class MyEggTab extends CreativeTabs
 
 	@Override
 	public Item getTabIconItem() {
-		return LotsOMobsMobs.itemSpawnEgg;
+		return Items.egg;
 	}
 }
